@@ -15,4 +15,13 @@ public class ListTest {
 
 		Assert.assertEquals(new Integer(2), lista.pegaPosicao(0));
 	}
+
+	@Test
+	public void DeveRemoverPrimeiroElemento() {
+		List<Integer> lista = new Nil<Integer>().adicionaNoComeco(1)
+				.adicionaNoComeco(2);
+
+		Assert.assertEquals(new Integer(1), lista.removePrimeiraPosicao()
+				.pegaPosicao(0));
+	}
 }
